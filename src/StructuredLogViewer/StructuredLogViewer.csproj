@@ -13,6 +13,9 @@
     <ChocolateyFileName>msbuild-structured-log-viewer</ChocolateyFileName>
     <DebugType>embedded</DebugType>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
   <Import Project="$(SrcRoot)\Common.props" />
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
